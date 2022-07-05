@@ -1,4 +1,4 @@
-#  ---------------------Input/Output Function - To get & display the values received from user. Variables  #
+#  --------------------- Input/Output Function - To get & display the values received from user. Variables ---------- #
 
 email_id = input("Enter your email id")
 print(email_id)

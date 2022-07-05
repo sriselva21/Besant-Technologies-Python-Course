@@ -1,4 +1,4 @@
-#  ---------------------Print Function - To display the message/values passed into the print function---------------  #
+#  ------------------- Print Function - To display the message/values passed into the print function ----------------  #
 print("Hello World!")  # It prints single value
 
 print("python", 12, -3, 45.6)  # It prints multiple different values in a single line
