@@ -43,3 +43,5 @@ dollar = 76
 print("Before swapping variable values -- Rupees is {} and Dollar is {}".format(rupee, dollar))
 rupee, dollar = dollar, rupee
 print("After swapping variable values -- Rupees is {} and Dollar is {}".format(rupee, dollar))
+
+#  ---------------------------------------  End of Variables Section --------------------------------------------  #
