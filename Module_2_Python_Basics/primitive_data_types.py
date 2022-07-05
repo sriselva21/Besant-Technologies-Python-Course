@@ -1,9 +1,11 @@
-#  ------------- Primitive/Fundamental data types and there built-in methods with examples in python ---------------  #
+#  ---------- Primitive/Fundamental data types, type conversion & there built-in methods with examples -------------  #
 
 """
 Fundamental or Primitive Data Types in Python
 • integer number - Whole number from -∞ to +∞ are integer numbers. Example: 45, -90, 89, 1171 are integer numbers.
 • floating point number - Is used to represent floating/decimal point numbers. Ex: 4.5, -9.0, 81.71
+• complex number - It has two parts, real part and imaginary part.
+    Complex numbers are represented as A+Bi or A+Bj, where A is real part and B is imaginary part.
 • boolean - Is used to represent logical True and False. True hold value as 1 and False as 0.
 • string - Is used to represent collection of characters. Characters can be any alphabets, digits & special characters.
     • Example of strings are 'welcome to python', 'hello 123', '1947', '@#$$$' etc.
@@ -60,6 +62,18 @@ con_lucky_number = float(lucky_number)
 print(con_lucky_number, type(lucky_number), 'After converting to float')
 
 #  ---------------------------------------  End of float data type -----------------------------------------------  #
+
+#  ---------------------------------------  Complex data type  -------------------------------------------------  #
+#  complex() - Is a built-in method which is used to convert values to complex data type
+cmp = 3+4j
+print(cmp, type(cmp))
+
+num1 = 67
+num2 = 34
+cmp_num = complex(num1,num2)
+print(cmp_num, type(cmp_num))
+
+#  ---------------------------------------  End of complex data type -----------------------------------------------  #
 
 
 #  ---------------------------------------  Boolean data type  -------------------------------------------------  #

@@ -24,6 +24,14 @@ Rules to name a variables
 
 name = "Python Programing"
 
+_emp = "Python world"
+
+full_name = "Technology"
+
+emp2 = "React Scripting language"
+
+lng3name = "HTML"
+
 # Assigning 3 different variables in a single line
 first, second, third = 1000, "Programming", True
 print(first, second, third)
