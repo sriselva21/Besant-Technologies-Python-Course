@@ -1,5 +1,4 @@
 #  ------------------------------------ Python Operators and some examples -----------------------------------------  #
-
 """  Operators are used to perform operations on variables and values. These are standard symbols used for the purpose
 of logical and arithmetic operations.
 
@@ -19,6 +18,8 @@ Python have 7 types of operators:
 • Membership operators - Used to test whether a value/variable is found in a sequence(string, list, tuple, set & dict).
 • Bitwise operators - Act on bits and perform the bit-by-bit operations. These are used to operate on binary numbers.
 """
+
+
 #  -------------------------------------------  Arithmetic operators  ----------------------------------------------  #
 """
 + - Used to perform string/list/tuple concatenation or addition of one or more numbers
