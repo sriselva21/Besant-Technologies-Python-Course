@@ -120,3 +120,73 @@ else:
 
 
 #  ---------------------------------------  End of elif condition  -----------------------------------------------  #
+
+
+#  -------------------------------------------  Nested if condition  ----------------------------------------------  #
+num = 10
+if num == 10:  # here the if condition checks whether the value of variable "num" is equal to 10
+    if type(num) == int:  
+        print('yes it 10 and integer type')  # if above 2 condition is true then only print statement can be executed
+
+
+num = 10
+if num == 10:  # here the if condition checks whether the value of variable "num" is equal to 10
+    if type(num) == str:  
+        print('yes it 10 and integer type')  # if above 2 condition is true then only print statement can be executed
+    else:
+        print('yes it 10, but not an integer type')  # if 2 condition is false then only print statement can be executed
+
+
+num = "abc"
+if num == 10:  # here the if condition checks whether the value of variable "num" is equal to 10
+    if type(num) == int:  
+        print('yes it 10 and integer type')  # if above 2 condition is true then only print statement can be executed
+    else:
+        print('yes it 10, but not an integer type')  # if 2 condition is false then only else statement can be executed
+else:
+    print("if condition failed")  # Main if condition is false then only this else statement can be executed
+    
+#  ---------------------------------------  End of Nested if condition  --------------------------------------------  #
+
+
+"""
+Python have 2 types of loop conditions:
+• for  - Iterating over a sequence of values like str, list, tuple, set, dict (keys only), Iteration limit is known.
+• while  - Keep on iterating until the condition becomes true, Iteration limit is unknown.
+for loop cannot be applied for numbers(int, float values), boolean data type. 
+"""
+
+
+#  -------------------------------------------  for condition  ----------------------------------------------  #
+"""
+Syntax --->  for variable in sequence: logic/condition:
+Example ---> for val in "good morning":
+                print(val)
+"""
+
+msg = "Welcome to python world"
+
+#  I want to print each letters from the variable msg
+for val in msg:  # here val is new variable, it can be anything name, but don't give the name which already exists.
+    print(val)  # it starts printing each letter continuously and stops when all letters printed from the msg.
+
+lst = ["hello", 1212, "welcome", [1, 2], (19, 12, "good")]
+#  I want to print each item from the variable lst
+for ll in lst:
+    print(ll)
+
+
+tup = ("morning", "welcome", [1, 2], (19, 12, "good"))
+for p in tup:
+    print(p)
+
+
+st = {"a", "b", "c", 1, 2}
+for s in st:
+    print(s)
+
+dct = {"a": 100, "b": 1000}
+for dc in dct:
+    print(dc)
+
+#  ---------------------------------------  End of for condition  -----------------------------------------------  #
