@@ -125,13 +125,13 @@ else:
 #  -------------------------------------------  Nested if condition  ----------------------------------------------  #
 num = 10
 if num == 10:  # here the if condition checks whether the value of variable "num" is equal to 10
-    if type(num) == int:  
+    if type(num) == int:
         print('yes it 10 and integer type')  # if above 2 condition is true then only print statement can be executed
 
 
 num = 10
 if num == 10:  # here the if condition checks whether the value of variable "num" is equal to 10
-    if type(num) == str:  
+    if type(num) == str:
         print('yes it 10 and integer type')  # if above 2 condition is true then only print statement can be executed
     else:
         print('yes it 10, but not an integer type')  # if 2 condition is false then only print statement can be executed
@@ -139,20 +139,20 @@ if num == 10:  # here the if condition checks whether the value of variable "num
 
 num = "abc"
 if num == 10:  # here the if condition checks whether the value of variable "num" is equal to 10
-    if type(num) == int:  
+    if type(num) == int:
         print('yes it 10 and integer type')  # if above 2 condition is true then only print statement can be executed
     else:
         print('yes it 10, but not an integer type')  # if 2 condition is false then only else statement can be executed
 else:
     print("if condition failed")  # Main if condition is false then only this else statement can be executed
-    
+
 #  ---------------------------------------  End of Nested if condition  --------------------------------------------  #
 
 
 """
 Python have 2 types of loop conditions:
 • for  - Iterating over a sequence of values like str, list, tuple, set, dict (keys only), Iteration limit is known.
-• while  - Keep on iterating until the condition becomes true, Iteration limit is unknown.
+• while  - Keep on iterating until the condition becomes false, Iteration limit is unknown.
 for loop cannot be applied for numbers(int, float values), boolean data type. 
 """
 
@@ -190,3 +190,34 @@ for dc in dct:
     print(dc)
 
 #  ---------------------------------------  End of for condition  -----------------------------------------------  #
+
+
+#  -------------------------------------------  while condition  ----------------------------------------------  #
+"""
+Syntax --->  while logic/condition:
+Example ---> while a == 10:
+                 print(a)  print statement keeps on executing until the 'a' value changes or the condition changes  
+"""
+
+msg = 10
+
+#  Here the while condition iteration is unknown,So print statement keeps on executing
+while msg > 5:  # condition is true
+    print('yes msg value is greater than 5')  # print keeps on executing until 'a' value changes or condition changes  
+
+while msg == 11:
+    print('yes msg value is 11')  # print will not execute, Since the condition is false
+    
+#  Only else condition can be written for while, We cant write if/elif condition in while loop
+while type(msg) == float:  # condition is true
+    print('yes its an float value')
+else:
+    print('no its not an float value')
+
+#  Here the while condition stops when num value becomes 10
+num = 0
+while num <= 10:
+    num += 1  # incrementing the num value plus one
+    print(num)  # it print incremented value
+
+#  ---------------------------------------  End of while condition  -----------------------------------------------  #
