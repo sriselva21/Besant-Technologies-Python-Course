@@ -43,11 +43,16 @@ for nb in numb:
     print(nb)
 
 
-#  6 Write a python program that accepts a string and calculate the number of digits and letters.
+#  6 Write a python program that accepts a string and calculate the number of digits and letters in it.
 
 stng = input("Enter the string to check if it contains digit or not: ")
-if not stng.isalpha():  # condition becomes false only when no numbers present in the given string
-    print("yes {} contains digits".format(stng))
+nom = chr = 0
+for h in stng:
+    if h.isalpha():
+        chr += 1
+    elif h.isdigit():
+        nom += 1
+print("Total letters count is {}, numbers count is {}".format(chr, nom))
 
 
 #  7 Write a python program to check whether an alphabet is a vowel or not.
