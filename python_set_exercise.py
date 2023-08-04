@@ -3,60 +3,145 @@
 
 #  1. Write a Python program to create a set.
 
-# 2. Write a Python program to iterate over sets.
+def create_set():
+    s = set(["hello", "world", "welcome"])
+    return s
 
-# 3. Write a Python program to add member(s) to a set.
 
-# 4. Write a Python program to remove item(s) from a given set.
+#  2. Write a Python program to iterate over sets.
 
-# 5. Write a Python program to remove an item from a set if it is present in the set.
+def iterate_sets():
+    s = {1, 2, 3, 'foo', 'bar'}
+    for i in s:
+        print(i, end=' ')
 
-# 6. Write a Python program to create an intersection of sets.
 
-# 7. Write a Python program to create a union of sets.
+#  3. Write a Python program to add member(s) to a set.
 
-# 8. Write a Python program to create set difference.
+def add_set_val(val):
+    s = {1, 2, 3, 'foo', 'bar'}
+    s.add(val)
+    return s
 
-# 9. Write a Python program to create a symmetric difference.
 
-# 10. Write a Python program to check if a set is a subset of another set.
+#  4. Write a Python program to remove item(s) from a given set.
 
-# 11. Write a Python program to create a shallow copy of sets.
+def remove_set(val):
+    s = {1, 2, 3, 'foo', 'bar'}
+    s.remove(val)
+    return s
 
-# 12. Write a Python program to remove all elements from a given set.
 
-# 13. Write a Python program that uses frozensets.
+#  5. Write a Python program to remove an item from a set if it is present in the set.
 
-# 14. Write a Python program to find the maximum and minimum values in a set.
+def delete_set(val):
+    s = {1, 2, 3, 'foo', 'bar'}
+    if val in s:
+        s.remove(val)
+        return s
+    else:
+        return f'{val} not present in set'
 
-# 15. Write a Python program to find the length of a set.
 
-# 16. Write a Python program to check if a given value is present in a set or not.
+#  6. Write a Python program to create an intersection of sets.
 
-# 17. Write a Python program to check if two given sets have no elements in common.
+def intersection_set():
+    set1 = {"hello", "welcome", "bye"}
+    set2 = {"bye", "good", "super"}
+    return set1.intersection(set2)
 
-# 18. Write a Python program to check if a given set is a superset of itself and a superset of another given set.
 
-# 19. Write a Python program to find elements in a given set that are not in another set.
+#  7. Write a Python program to create a union of sets.
 
-# 20. Write a Python program to remove the intersection of a second set with a first set.
+def set_union():
+    set1 = {"hello", "welcome", "bye"}
+    set2 = {"bye", "good", "super"}
+    return set1.union(set2)
 
-# 21. Write a Python program to find all the unique words and count the frequency of occurrence from a given list of strings. Use Python set data type.
 
-# 22. Write a Python program that finds all pairs of elements in a list whose sum is equal to a given value.
+#  8. Write a Python program to create set difference.
 
-# 23. Write a Python program to find the longest common prefix of all strings. Use the Python set.
+def set_difference():
+    set1 = {"hello", "welcome", "bye"}
+    set2 = {"bye", "good", "super"}
+    return set1.difference(set2)
 
-# 24. Write a Python program to find the two numbers whose product is maximum among all the pairs in a given list of numbers. Use the Python set.
 
-# 25. Given two sets of numbers, write a Python program to find the missing numbers in the second set as compared to the first and vice versa. Use the Python set.
+#  9. Write a Python program to create a symmetric difference.
 
-# 26. Write a Python program to find all the anagrams and group them together from a given list of strings. Use the Python data type.
+def set_symmetric_difference():
+    set1 = {"hello", "welcome", "bye"}
+    set2 = {"bye", "good", "super"}
+    return set1.symmetric_difference(set2)
 
-# 27. Write a Python program to find all the anagrams in a given list of strings and then group them together. Use the Python data type.
 
-# 28. Write a Python program to find all the unique combinations of 3 numbers from a given list of numbers, adding up to a target number.
+#  10. Write a Python program to check if a set is a subset of another set.
 
-# 29. Write a Python program to find the third largest number from a given list of numbers.Use the Python set data type.
+def set_subset():
+    set1 = {"hello", "welcome", "bye"}
+    set2 = {"bye", "good", "super"}
+    return set1.issubset(set2)
 
-# 30. Write a Python program to remove all duplicates from a given list of strings and return a list of unique strings. Use the Python set data type.
+
+#  11. Write a Python program to create a shallow copy of sets.
+
+def shallow_set():
+    set1 = {"hello", "welcome", "bye"}
+    new_set1 = set1.copy()
+    return new_set1
+
+
+#  12. Write a Python program to remove all elements from a given set.
+
+def remove_all_set():
+    set1 = {"hello", "welcome", "bye"}
+    set1.clear()
+    return set1
+
+
+#  13. Write a Python program that uses frozensets.
+
+def frozen_sets():
+    fz_set = frozenset({"hello", "welcome", "bye"})
+    return fz_set
+
+
+#  14. Write a Python program to find the maximum and minimum values in a set.
+
+def max_min_set_val():
+    val = {1, 2, 33, -1, 400}
+    return max(val), min(val)
+
+
+#  15. Write a Python program to find the length of a set.
+
+def len_set(val):
+    return len(val)
+
+
+#  16. Write a Python program to check if a given value is present in a set or not.
+
+def check_set_val(st, val):
+    if val in st:
+        return f'Yes {val} present in set {st}'
+    else:
+        return f'No {val} not present in set {st}'
+
+
+#  18. Write a Python program to check if a given set is a superset of itself and a superset of another given set.
+
+def check_superset(set1, set2):
+    print(set1.issuperset(set1))
+    print(set1.issuperset(set2))
+
+
+#  19. Write a Python program to find elements in a given set that are not in another set.
+
+def check_set(set1, set2):
+    return set1.difference(set2)
+
+
+#  20. Write a Python program to remove the intersection of a second set with a first set.
+
+def set_intersection(set1, set2):
+    return set2.intersection(set1)
