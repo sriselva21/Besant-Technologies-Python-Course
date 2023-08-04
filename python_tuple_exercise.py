@@ -1,134 +1,191 @@
 #  --------------------------- Python Tuple exercise problems with solutions  -----------------------------  #
 
 
-# 1. Write a Python program to create an empty tuple.
+#  1. Write a Python program to create an empty tuple.
 
-# 2. Write a Python program to create a tuple with different data types.
+def create_tuple():
+    tp = tuple()
+    return tp
 
-# 3. Write a Python program to create a tuple with one item.
 
-# 4. Write a Python program to unpack a tuple into several variables.
+#  2. Write a Python program to create a tuple with different data types.
 
-# 5. Write a Python program to add an item to a tuple.
+def tuple_val():
+    tp = (10, -3, 4.5, "tuple data type", [1, 2, 3], (19, 12), {1, 2, "a"}, {"name": "dell"})
+    return tp
 
-# 6. Write a Python program to convert a tuple to a string.
 
-# 7. Write a Python program to get the 4th element from the last element of a tuple.
+#  3. Write a Python program to create a tuple with one item.
 
-# 8. Write a Python program to create the colon of a tuple.
+def single_tuple():
+    tp = 10,
+    tup = ("hello",)
+    return tp, tup
 
-# 9. Write a Python program to find repeated items in a tuple.
 
-# 10. Write a Python program to check whether an element exists within a tuple.
+#  4. Write a Python program to unpack a tuple into several variables.
 
-# 11. Write a Python program to convert a list to a tuple.
+def unpack_tuple():
+    name, email, mobile = "Google", "gmail.com", 98450
+    return name, email, mobile
 
-# 12. Write a Python program to remove an item from a tuple.
 
-# 13. Write a Python program to slice a tuple.
+#  5. Write a Python program to add an item to a tuple.
 
-# 14. Write a Python program to find the index of an item in a tuple.
+def add_tuple_val():
+    tup = 12, 13, -55
+    tup = tup + (9, "hello")
+    new_tup = tup[:2] + (15, 20, 25) + tup[4:]
+    return tup, new_tup
 
-# 15. Write a Python program to find the length of a tuple.
 
-# 16. Write a Python program to convert a tuple to a dictionary.
+#  6. Write a Python program to convert a tuple to a string.
 
-# 17. Write a Python program to unzip a list of tuples into individual lists.
+def tuple_str():
+    tup = ("mon", "tue", "wed")
+    char = ','.join(tup)
+    return char
 
-# 18. Write a Python program to reverse a tuple.
 
-# 19. Write a Python program to convert a list of tuples into a dictionary.
+#  7. Write a Python program to get the last 4th element from given tuple.
 
-# 20. Write a Python program to print a tuple with string formatting.
-# Sample tuple : (100, 200, 300)
-# Output : This is a tuple (100, 200, 300)
+def get_tuple_val(tup):
+    if len(tup) >=4:
+        return tup[-4]
+    else:
+        return "Total tuple values is less than or not equal to 4"
 
-# 21. Write a Python program to replace the last value of tuples in a list.
-# Sample list: [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
-# Expected Output: [(10, 20, 100), (40, 50, 100), (70, 80, 100)]
 
-# 22. Write a Python program to remove an empty tuple(s) from a list of tuples.
-# Sample data: [(), (), ('',), ('a', 'b'), ('a', 'b', 'c'), ('d')]
-# Expected output: [('',), ('a', 'b'), ('a', 'b', 'c'), 'd']
+#  8. Write a Python program to find repeated items in a tuple.
 
-# 23. Write a Python program to sort a tuple by its float element.
-# Sample data: [('item1', '12.20'), ('item2', '15.10'), ('item3', '24.5')]
-# Expected Output: [('item3', '24.5'), ('item2', '15.10'), ('item1', '12.20')]
+def duplicate_tuple(tup):
+    val = [(i,tup.count(i)) for i in tup if tup.count(i) > 1]
+    return val
 
-# 24. Write a Python program to count the elements in a list until an element is a tuple.
 
-# 25. Write a Python program to convert a given string list to a tuple.
-# Original string: python 3.0
-# <class 'str'>
-# Convert the said string to a tuple:
-# ('p', 'y', 't', 'h', 'o', 'n', '3', '.', '0')
-# <class 'tuple'>
+#  9. Write a Python program to check whether an element exists within a tuple.
 
-# 26. Write a Python program to calculate the product, multiplying all the numbers in a given tuple.
-# Original Tuple:
-# (4, 3, 2, 2, -1, 18)
-# Product - multiplying all the numbers of the said tuple: -864
-# Original Tuple:
-# (2, 4, 8, 8, 3, 2, 9)
-# Product - multiplying all the numbers of the said tuple: 27648
+def find_tuple(tup, val):
+    if val in tup:
+        return f'Yes value {val} is within tuple'
+    else:
+        return f'No value {val} is not within tuple'
 
-# 27. Write a Python program to calculate the average value of the numbers in a given tuple of tuples.
-# Original Tuple:
-# ((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))
-# Average value of the numbers of the said tuple of tuples:
-# [30.5, 34.25, 27.0, 23.25]
-# Original Tuple:
-# ((1, 1, -5), (30, -15, 56), (81, -60, -39), (-10, 2, 3))
-# Average value of the numbers of the said tuple of tuples:
-# [25.5, -18.0, 3.75]
 
-# 28. Write a Python program to convert a tuple of string values to a tuple of integer values.
-# Original tuple values:
-# (('333', '33'), ('1416', '55'))
-# New tuple values:
-# ((333, 33), (1416, 55))
+#  10. Write a Python program to convert a list to a tuple.
 
-# 29. Write a Python program to convert a given tuple of positive integers into an integer.
-# Original tuple:
-# (1, 2, 3)
-# Convert the said tuple of positive integers into an integer:
-# 123
-# Original tuple:
-# (10, 20, 40, 5, 70)
-# Convert the said tuple of positive integers into an integer:
-# 102040570
+def lst_tup(lst):
+    tup = tuple(lst)
+    return tup
 
-# 30. Write a Python program to check if a specified element appears in a tuple of tuples.
-# Original list:
-# (('Red', 'White', 'Blue'), ('Green', 'Pink', 'Purple'), ('Orange', 'Yellow', 'Lime'))
-# Check if White presenet in said tuple of tuples!
-# True
-# Check if White presenet in said tuple of tuples!
-# True
-# Check if Olive presenet in said tuple of tuples!
-# False
 
-# 31. Write a Python program to compute the element-wise sum of given tuples.
-# Original lists:
-# (1, 2, 3, 4)
-# (3, 5, 2, 1)
-# (2, 2, 3, 1)
-# Element-wise sum of the said tuples:
-# (6, 9, 8, 6)
+#  11. Write a Python program to remove an item from a tuple.
 
-# 32. Write a Python program to compute the sum of all the elements of each tuple stored inside a list of tuples.
-# Original list of tuples:
-# [(1, 2), (2, 3), (3, 4)]
-# Sum of all the elements of each tuple stored inside the said list of tuples:
-# [3, 5, 7]
-# Original list of tuples:
-# [(1, 2, 6), (2, 3, -6), (3, 4), (2, 2, 2, 2)]
-# Sum of all the elements of each tuple stored inside the said list of tuples:
-# [9, -1, 7, 8]
+def remove_tuple():
+    tup = (1, 4, '44', 11, 5, 44)
+    removed_val = "44"
+    tup = tup[:2]+tup[3:]
+    return tup
 
-# 33. Write a Python program to convert a given list of tuples to a list of lists.
-# Original list of tuples: [(1, 2), (2, 3), (3, 4)]
-# Convert the said list of tuples to a list of lists: [[1, 2], [2, 3], [3, 4]]
-# Original list of tuples: [(1, 2), (2, 3, 5), (3, 4), (2, 3, 4, 2)]
-# Convert the said list of tuples to a list of lists: [[1, 2], [2, 3, 5], [3, 4], [2, 3, 4, 2]]
-#
+
+#  12. Write a Python program to slice a tuple.
+
+def tuple_slice():
+    tup = (1, 4, '44', 11, 5, 44)
+    print(tup[2:])
+    print(tup[:5])
+    print(tup[2:10])
+    print(tup[:])
+
+
+#  13. Write a Python program to find the index of an item in a tuple.
+
+def find_index():
+    tup = (1, 4, '44', 11, 5, 44)
+    for i in tup:
+        print(i, tup.index(i))
+
+
+#  14. Write a Python program to find the length of a tuple.
+
+def len_tuple(val):
+    return len(val)
+
+
+#  15. Write a Python program to replace the last value of tuples in a list.
+#  Sample list: [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+#  Expected Output: [(10, 20, 100), (40, 50, 100), (70, 80, 100)]
+
+def replace_tup(lst_tup):
+    lst_tup = [i[:-1] + (100, ) for i in lst_tup]
+    return lst_tup
+
+
+#  16. Write a Python program to calculate the product, multiplying all the numbers in a given tuple.
+#  Original Tuple:
+#  (4, 3, 2, 2, -1, 18)
+#  Product - multiplying all the numbers of the said tuple: -864
+#  Original Tuple:
+#  (2, 4, 8, 8, 3, 2, 9)
+#  Product - multiplying all the numbers of the said tuple: 27648
+
+def cal_tup_pro(tup):
+    val = 1
+    for i in tup:
+        val *= i
+    return val
+
+
+#  17. Write a Python program to check if a specified element appears in a tuple of tuples.
+#  Original list:
+#  (('Red', 'White', 'Blue'), ('Green', 'Pink', 'Purple'), ('Orange', 'Yellow', 'Lime'))
+#  Check if White presenet in said tuple of tuples!
+#  True
+#  Check if White presenet in said tuple of tuples!
+#  True
+#  Check if Olive presenet in said tuple of tuples!
+#  False
+
+def check_val_tuple(tup, val):
+    for i in tup:
+        if val in i:
+            return True
+        else:
+            return False
+
+
+#  18. Write a Python program to compute the sum of all the elements of each tuple stored inside a list of tuples.
+#  Original list of tuples:
+#  [(1, 2), (2, 3), (3, 4)]
+#  Sum of all the elements of each tuple stored inside the said list of tuples:
+#  [3, 5, 7]
+#  Original list of tuples:
+#  [(1, 2, 6), (2, 3, -6), (3, 4), (2, 2, 2, 2)]
+#  Sum of all the elements of each tuple stored inside the said list of tuples:
+#  [9, -1, 7, 8]
+
+def sum_tuple(tup):
+    t = [sum(i) for i in tup]
+    return t
+
+
+#  19. Write a Python program to convert a given list of tuples to a list of lists.
+#  Original list of tuples: [(1, 2), (2, 3), (3, 4)]
+#  Convert the said list of tuples to a list of lists: [[1, 2], [2, 3], [3, 4]]
+#  Original list of tuples: [(1, 2), (2, 3, 5), (3, 4), (2, 3, 4, 2)]
+#  Convert the said list of tuples to a list of lists: [[1, 2], [2, 3, 5], [3, 4], [2, 3, 4, 2]]
+
+def list_tuple(tup):
+    t = [list(i) for i in tup]
+    return t
+
+
+#  20. Write a Python program to convert a given list of tuples to set.
+#  Original list of tuples: [(1, 2), (2, 3), (3, 4)]
+#  Convert the said list of tuples to a list of lists: [{1, 2}, {2, 3}, {3, 4}]
+#  Original list of tuples: [(1, 2), (2, 3, 5), (3, 4), (2, 3, 4, 2)]
+#  Convert the said list of tuples to a list of lists: [{1, 2}, {2, 3, 5}, {3, 4}, {2, 3, 4, 2}]
+
+def set_tuple(tup):
+    t = [set(i) for i in tup]
+    return t
