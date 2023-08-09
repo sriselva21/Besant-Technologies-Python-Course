@@ -279,3 +279,170 @@ def group_lst_dct():
         else:
             dct[i[0]] = [i[1]]
     return dct
+
+
+#  26. A Python dictionary contains List as a value. Write a Python program to clear the list values in the said
+#  dictionary.
+#  Original Dictionary:
+#  {'C1': [10, 20, 30], 'C2': [20, 30, 40], 'C3': [12, 34]}
+#  Clear the list values in the said dictionary:
+#  {'C1': [], 'C2': [], 'C3': []}
+
+def clear_dct_val():
+    dct = {'C1': [10, 20, 30], 'C2': [20, 30, 40], 'C3': [12, 34]}
+    for i in dct:
+        dct[i] = []
+    return dct
+
+
+#  27. Write a Python program to extract a list of values from a given list of dictionaries.
+#  Original Dictionary:
+#  [{'Math': 90, 'Science': 92}, {'Math': 89, 'Science': 94}, {'Math': 92, 'Science': 88}]
+#  Extract a list of values from said list of dictionaries where subject = Science
+#  [92, 94, 88]
+#  Original Dictionary:
+#  [{'Math': 90, 'Science': 92}, {'Math': 89, 'Science': 94}, {'Math': 92, 'Science': 88}]
+#  Extract a list of values from said list of dictionaries where subject = Math
+#  [90, 89, 92]
+
+def extract_dct_val(dct, key):
+    dct_val = []
+    for i in dct:
+        if i.get(key):
+            dct_val.append(i.get(key))
+    return dct_val
+
+
+#  28. Write a Python program to find the length of a dictionary of values.
+#  Original Dictionary:
+#  {1: 'red', 2: 'green', 3: 'black', 4: 'white', 5: 'black'}
+#  Length of dictionary values:
+#  {'red': 3, 'green': 5, 'black': 5, 'white': 5}
+#  Original Dictionary:
+#  {'1': 'Austin Little', '2': 'Natasha Howard', '3': 'Alfred Mullins', '4': 'Jamie Rowe'}
+#  Length of dictionary values:
+#  {'Austin Little': 13, 'Natasha Howard': 14, 'Alfred Mullins': 14, 'Jamie Rowe': 10}
+
+def len_dct_val(dct):
+    dct_val_len = {}
+    for k, y in dct.items():
+        dct_val_len[y] = len(y)
+    return dct_val_len
+
+
+#  29. Write a Python program to convert a dictionary into a list of lists.
+#  Original Dictionary:
+#  {1: 'red', 2: 'green', 3: 'black', 4: 'white', 5: 'black'}
+#  Convert the said dictionary into a list of lists:
+#  [[1, 'red'], [2, 'green'], [3, 'black'], [4, 'white'], [5, 'black']]
+#  Original Dictionary:
+#  {'1': 'Austin Little', '2': 'Natasha Howard', '3': 'Alfred Mullins', '4': 'Jamie Rowe'}
+#  Convert the said dictionary into a list of lists:
+#  [['1', 'Austin Little'], ['2', 'Natasha Howard'], ['3', 'Alfred Mullins'], ['4', 'Jamie Rowe']]
+
+def dct_lst(dct):
+    lst = [list(i) for i in dct.items()]
+    return lst
+
+
+#  30. Write a Python program to filter even numbers from a dictionary of values.
+#  Original Dictionary:
+#  {'V': [1, 4, 6, 10], 'VI': [1, 4, 12], 'VII': [1, 3, 8]}
+#  Filter even numbers from said dictionary values:
+#  {'V': [4, 6, 10], 'VI': [4, 12], 'VII': [8]}
+#  Original Dictionary:
+#  {'V': [1, 3, 5], 'VI': [1, 5], 'VII': [2, 7, 9]}
+#  Filter even numbers from said dictionary values:
+#  {'V': [], 'VI': [], 'VII': [2]}
+
+def dct_even_odd(dct):
+    for k in dct:
+        dct[k] = [i for i in dct[k] if i%2 == 0]
+    return dct
+
+
+#  31. Write a Python program to get the total length of all values in a given dictionary with string values.
+#  Original dictionary:
+#  {'#FF0000': 'Red', '#800000': 'Maroon', '#FFFF00': 'Yellow', '#808000': 'Olive'}
+#  Total length of all values of the said dictionary with string values:
+#  20
+
+def total_val_len(dct):
+    count = 0
+    for d in dct:
+        count += len(dct[d])
+    return count
+
+
+#  32. Write a Python program to check if a specific key and a value exist in a dictionary, then return true else false.
+#  Original dictionary:
+#  {'student_id': 1, 'name': 'Jean Castro', 'class': 'V'}
+
+def check_key_val(dct, key, val):
+    k = dct.keys()
+    v = dct.values()
+    if key in k and val in v:
+        return True
+    else:
+        return False
+
+
+#  33. Write a Python program to combine two or more dictionaries, creating a list of values for each key.
+#  Sample Output:
+#  Original dictionaries:
+#  {'w': 50, 'x': 100, 'y': 'Green', 'z': 400}
+#  {'x': 300, 'y': 'Red', 'z': 600}
+#  Combined dictionaries, creating a list of values for each key:
+#  {'w': [50], 'x': [100, 300], 'y': ['Green', 'Red'], 'z': [400, 600]}
+
+def combine_dct(dct1, dct2):
+    dct = {}
+    for k in dct1:
+        if k in dct2:
+            dct[k] = [dct1[k], dct2[k]]
+        else:
+            dct[k] = [dct1[k]]
+    return dct
+
+
+#  34.Write a Python program to convert a list of dictionaries into a list of values corresponding to the specified key.
+#  Sample Output:
+#  Original list of dictionaries:
+#  [{'name': 'Theodore', 'age': 18}, {'name': 'Mathew', 'age': 22}, {'name': 'Roxanne', 'age': 20}]
+#  Convert a list of dictionaries into a list of values corresponding to the specified key:
+#  [18, 22, 20]
+
+def convert_dct_val(lst, key):
+    val = [i[key] for i in lst if key in i]
+    return val
+
+
+#  35. Write a Python program to combine two lists into a dictionary. The elements of the first one serve as keys and
+#  the elements of the second one serve as values. Each item in the first list must be unique and hashable.
+#  Sample Output:
+#  Original lists:
+#  ['a', 'b', 'c', 'd', 'e', 'f']
+#  [1, 2, 3, 4, 5]
+#  Combine the values of the said two lists into a dictionary:
+#  {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+def create_dct(lst1, lst2):
+    # dct = {key: val for key, val in zip(lst1, lst2)}
+    dct = {}
+    for key, val in zip(lst1, lst2):
+        dct[key] = val
+    return dct
+
+
+#  36. Write a Python program to transform a dictionary into a list of tuples.
+#  Sample Output:
+#  Original Dictionary:
+#  {'Red': 1, 'Green': 3, 'White': 5, 'Black': 2, 'Pink': 4}
+#  Convert the said dictionary to a list of tuples:
+#  [('Red', 1), ('Green', 3), ('White', 5), ('Black', 2), ('Pink', 4)]
+
+def dct_lst_tup(dct):
+    return dct.items()
+if __name__ == "__main__":
+    print(dct_lst_tup({'Red': 1, 'Green': 3, 'White': 5, 'Black': 2, 'Pink': 4}
+                      ))
